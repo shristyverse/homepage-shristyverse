@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - SHRISTYVERSE</title>
+    <script>
+        // URL redirects for pages without .html extension
+        (function() {
+            var path = window.location.pathname;
+            
+            // Strip trailing slash if present
+            if (path.endsWith('/') && path.length > 1) {
+                path = path.slice(0, -1);
+            }
+            
+            // Map of clean URLs to actual HTML files
+            var redirectMap = {
+                '/ai-solutions': '/ai_solutions.html',
+                '/ai-solutions-ja': '/ai_solutions_ja.html',
+                '/web-development': '/web_development.html',
+                '/web-development-ja': '/web_development_ja.html',
+                '/home': '/index.html',
+                '/home-ja': '/index_ja.html'
+            };
+            
+            // Check if path exists in our redirect map
+            if (redirectMap[path]) {
+                window.location.href = redirectMap[path];
+            } else {
+                // Try appending .html to see if file exists
+                var htmlPath = path + '.html';
+                fetch(htmlPath)
+                    .then(function(response) {
+                        if (response.status === 200) {
+                            window.location.href = htmlPath;
+                        }
+                    })
+                    .catch(function() {
+                        // Do nothing, let the 404 page show
+                    });
+            }
+        })();
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', 'Space Grotesk', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            padding: 4rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #6366F1, #8B5CF6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #6366F1, #8B5CF6);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.25);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Page Not Found</h1>
+        <p>We couldn't find the page you were looking for. It might have been moved or doesn't exist.</p>
+        <a href="/" class="btn">Return to Homepage</a>
+    </div>
+</body>
+</html> 

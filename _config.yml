@@ -1,0 +1,3 @@
+permalink: pretty
+include: [".well-known"]
+exclude: ["node_modules", "*.log", "README.md", "TRANSFER_INSTRUCTIONS.md", "ORG_ACCESS_INSTRUCTIONS.md"] 
