@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enterprise AI Solutions | SHRISTYVERSE</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0A192F, #112240, #1A365D);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .solution-section {
+            padding: 6rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .solution-section:last-child {
+            border-bottom: none;
+        }
+        
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-intro {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+        
+        .section-intro h1 {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #fff, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .section-intro p {
+            font-size: 2.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        
+        .solution-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+        
+        .solution-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .solution-icon i {
+            font-size: 2.4rem;
+            color: #00f2fe;
+        }
+        
+        .solution-card h3 {
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            color: #00f2fe;
+        }
+        
+        .solution-card p {
+            font-size: 1.6rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .solution-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .solution-features li {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .solution-features li i {
+            color: #00f2fe;
+            margin-right: 1rem;
+            font-size: 1.4rem;
+            margin-top: 0.3rem;
+        }
+        
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1000px;
+            margin-top: 2rem;
+        }
+        
+        .particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: radial-gradient(circle at center, rgba(10, 25, 47, 0), rgba(10, 25, 47, 0.8));
+        }
+        
+        .hero-title {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #fff, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 2.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-description {
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 3.6rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 5rem;
+        }
+        
+        .approach-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .approach-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .approach-card .number {
+            font-size: 5rem;
+            font-weight: bold;
+            color: rgba(0, 242, 254, 0.2);
+            margin-bottom: 1.5rem;
+        }
+        
+        .approach-card h3 {
+            font-size: 2.2rem;
+            color: #00f2fe;
+            margin-bottom: 1.5rem;
+        }
+        
+        .approach-card p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 1024px) {
+            .solutions-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 4.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 2.4rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .section-intro h1 {
+                font-size: 3.5rem;
+            }
+            
+            .section-intro p {
+                font-size: 1.8rem;
+            }
+            
+            .hero-title {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles-config.js"></script>
+</head>
+<body>
+    <header class="s-header" style="position: fixed; top: 0; width: 100%; background-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.9));">
+        <div class="row s-header__inner width-sixteen-col">
+            <div class="s-header__block">
+                <div class="s-header__logo">
+                    <a class="logo" href="index.html">
+                        <img src="images/logo.svg" alt="Homepage">
+                    </a>
+                </div>
+                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+            </div>
+            <nav class="s-header__nav">
+                <ul class="flex space-x-1 md:space-x-4 text-sm font-medium">
+                    <li><a href="web_development.html" class="text-gray-300 hover:text-white transition-colors duration-200">Web Development</a></li>
+                    <li><a href="ai_solutions.html" class="text-gray-300 hover:text-white transition-colors duration-200">AI Solutions</a></li>
+                    <li><a href="index.html#about" class="text-gray-300 hover:text-white transition-colors duration-200">About Us</a></li>
+                    <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors duration-200">Contact</a></li>
+                    <li><a href="ai_solutions_ja.html" class="text-gray-300 hover:text-white transition-colors duration-200">日本語</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main style="padding-top: 80px;">
+        <section class="hero-section">
+            <div id="particles-js" class="particles-js"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Enterprise-Grade AI Solutions</h1>
+                <h2 class="hero-subtitle">Tailored for Small and Medium Enterprises</h2>
+                <p class="hero-description">We develop, fine-tune, and customize cutting-edge AI solutions that address the specific operational challenges of growing businesses while ensuring complete data sovereignty and integration with existing systems.</p>
+            </div>
+        </section>
+        
+        <section class="solution-section">
+            <div class="solution-content">
+                <div class="section-header">
+                    <h2>Our AI Solutions Portfolio</h2>
+                    <p>Transformative, customizable AI systems designed specifically for the operational challenges and budget constraints of small and medium enterprises.</p>
+                </div>
+                
+                <div class="solutions-grid">
+                    <!-- OCR Solution -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Intelligent Document Processing</h3>
+                        <p>Transform your document workflows with our advanced OCR and intelligent data extraction system, capable of handling complex multi-page documents, forms, and legacy formats.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> 99.5% accuracy for structured documents with custom training</li>
+                            <li><i class="fas fa-check"></i> Form field recognition and automated data entry</li>
+                            <li><i class="fas fa-check"></i> Multi-language support including Asian character sets</li>
+                            <li><i class="fas fa-check"></i> Seamless integration with existing document management systems</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Chatbot Solution -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Context-Aware Knowledge Assistants</h3>
+                        <p>Deploy sophisticated conversational AI that can access your company's knowledge base, documents, and databases to provide accurate, contextual responses to internal and customer queries.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> PDF, document, and database integration capabilities</li>
+                            <li><i class="fas fa-check"></i> Multi-turn conversation memory and context retention</li>
+                            <li><i class="fas fa-check"></i> Role-based access control and information security</li>
+                            <li><i class="fas fa-check"></i> Omnichannel deployment (web, mobile, messaging platforms)</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Meeting Intelligence -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h3>Meeting Intelligence Suite</h3>
+                        <p>Capture the full value of your organization's meetings with our AI-powered transcription, summarization, and action item extraction system designed for multi-speaker environments.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> Speaker identification and voice signature recognition</li>
+                            <li><i class="fas fa-check"></i> Automated action item assignment and tracking</li>
+                            <li><i class="fas fa-check"></i> Key decision and insight extraction</li>
+                            <li><i class="fas fa-check"></i> Integration with project management tools</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Talent Matching -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Precision Talent Matching</h3>
+                        <p>Streamline your recruitment process with an AI-driven system that goes beyond keyword matching to understand role requirements and candidate capabilities at a semantic level.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> Skill taxonomy mapping and competency inference</li>
+                            <li><i class="fas fa-check"></i> Culture fit and team compatibility analysis</li>
+                            <li><i class="fas fa-check"></i> Bias detection and mitigation algorithms</li>
+                            <li><i class="fas fa-check"></i> Automated candidate communication workflows</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Predictive Analytics -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>SME-Focused Predictive Analytics</h3>
+                        <p>Gain enterprise-grade forecasting capabilities tailored to SME data volumes with our adaptive predictive models that provide actionable business insights without requiring data science expertise.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> Demand forecasting with limited historical data</li>
+                            <li><i class="fas fa-check"></i> Inventory optimization and cash flow prediction</li>
+                            <li><i class="fas fa-check"></i> Customer churn prevention alerts</li>
+                            <li><i class="fas fa-check"></i> Visual analytics dashboards for non-technical users</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Visual Quality Control -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Visual Quality Assurance</h3>
+                        <p>Implement computer vision systems that can detect defects, inconsistencies, and quality issues in manufacturing and production environments with minimal hardware requirements.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> Anomaly detection with limited training examples</li>
+                            <li><i class="fas fa-check"></i> Integration with standard industrial cameras</li>
+                            <li><i class="fas fa-check"></i> Real-time alert system for immediate intervention</li>
+                            <li><i class="fas fa-check"></i> Continuous learning from operator feedback</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Customer Insights -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Customer Insight Engine</h3>
+                        <p>Extract actionable insights from customer interactions across multiple channels with our NLP-powered sentiment analysis and feedback categorization system.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> Multi-channel feedback aggregation (social, email, support)</li>
+                            <li><i class="fas fa-check"></i> Sentiment trend analysis and alert thresholds</li>
+                            <li><i class="fas fa-check"></i> Automated feedback categorization by product/service area</li>
+                            <li><i class="fas fa-check"></i> Competitive intelligence extraction from public reviews</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Content Generation -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <h3>Brand-Aligned Content Generation</h3>
+                        <p>Accelerate your content creation with AI systems that can generate marketing copy, product descriptions, and communications that maintain your company's unique voice and style guidelines.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> Voice and tone customization to match brand identity</li>
+                            <li><i class="fas fa-check"></i> Multi-lingual content adaptation (not just translation)</li>
+                            <li><i class="fas fa-check"></i> Regulatory compliance checking for industry-specific content</li>
+                            <li><i class="fas fa-check"></i> SEO optimization with keyword strategy integration</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Process Automation -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Intelligent Process Automation</h3>
+                        <p>Combine the power of machine learning with traditional automation to create systems that can handle complex business processes requiring judgment and exception handling.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> Natural language instruction for process configuration</li>
+                            <li><i class="fas fa-check"></i> Decision-making capabilities for complex workflows</li>
+                            <li><i class="fas fa-check"></i> Human-in-the-loop intervention for exceptions</li>
+                            <li><i class="fas fa-check"></i> Process analytics and continuous improvement recommendations</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recommendation Engine -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Small-Data Recommendation Engine</h3>
+                        <p>Leverage advanced transfer learning techniques to build personalization systems that deliver effective recommendations even with the limited data volumes typical of SME operations.</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> Cold-start problem mitigation for new products/users</li>
+                            <li><i class="fas fa-check"></i> Cross-category recommendation capabilities</li>
+                            <li><i class="fas fa-check"></i> Hybrid filtering approach for diverse data types</li>
+                            <li><i class="fas fa-check"></i> A/B testing framework for recommendation strategies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="solution-section">
+            <div class="solution-content">
+                <div class="section-header">
+                    <h2>Our Approach to Enterprise AI for SMEs</h2>
+                    <p>We've developed a methodology that brings enterprise-grade AI capabilities to growing businesses through a systematic approach focused on rapid deployment and measurable ROI.</p>
+                </div>
+                
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="number">01</div>
+                        <h3>Domain-Specific Adaptation</h3>
+                        <p>We adapt foundation models to your specific industry vertical and operational context, dramatically reducing the data requirements while maintaining high performance.</p>
+                    </div>
+                    
+                    <div class="approach-card">
+                        <div class="number">02</div>
+                        <h3>On-Premises Deployment</h3>
+                        <p>Our solutions operate entirely within your existing infrastructure, ensuring complete data sovereignty and compliance with privacy regulations.</p>
+                    </div>
+                    
+                    <div class="approach-card">
+                        <div class="number">03</div>
+                        <h3>Integration-First Design</h3>
+                        <p>We design every solution to integrate seamlessly with your existing technology stack, minimizing disruption and maximizing adoption.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="solution-section" style="text-align: center;">
+            <div class="solution-content">
+                <h2 style="font-size: 3.6rem; color: #fff; margin-bottom: 3rem;">Ready to Leverage AI for Your Business?</h2>
+                <a href="index.html#contact" class="contact-btn" style="display: inline-block; padding: 1.8rem 3.5rem; background: linear-gradient(45deg, #4facfe, #00f2fe); border-radius: 50px; color: white; font-size: 2rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);">Contact Our Team <i class="fas fa-arrow-right" style="margin-left: 1rem;"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: '#00f2fe'
+                    },
+                    shape: {
+                        type: 'circle'
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false,
+                        animation: {
+                            enable: true,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        animation: {
+                            enable: true,
+                            speed: 2,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: '#00f2fe',
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'out',
+                        bounce: false,
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: 'grab'
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: 'push'
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 140,
+                            line_linked: {
+                                opacity: 1
+                            }
+                        },
+                        push: {
+                            particles_nb: 4
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/3a9b2795f3.js" crossorigin="anonymous"></script>
+</body>
+</html>

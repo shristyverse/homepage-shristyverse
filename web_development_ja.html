@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ウェブ開発ソリューション | SHRISTYVERSE</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #2D1B4E, #45206E, #5A277F);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .solution-section {
+            padding: 6rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .solution-section:last-child {
+            border-bottom: none;
+        }
+        
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-intro {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+        
+        .section-intro h1 {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #fff, #FF7E5F);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .section-intro p {
+            font-size: 2.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        
+        .solution-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 126, 95, 0.3);
+        }
+        
+        .solution-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, rgba(255, 126, 95, 0.2), rgba(252, 70, 107, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .solution-icon i {
+            font-size: 2.4rem;
+            color: #FF7E5F;
+        }
+        
+        .solution-card h3 {
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            color: #FF7E5F;
+        }
+        
+        .solution-card p {
+            font-size: 1.6rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .solution-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .solution-features li {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .solution-features li i {
+            color: #FF7E5F;
+            margin-right: 1rem;
+            font-size: 1.4rem;
+            margin-top: 0.3rem;
+        }
+        
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1000px;
+            margin-top: 2rem;
+        }
+        
+        .particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: radial-gradient(circle at center, rgba(45, 27, 78, 0), rgba(45, 27, 78, 0.8));
+        }
+        
+        .hero-title {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #fff, #FF7E5F);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 2.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-description {
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 3.6rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 5rem;
+        }
+        
+        .approach-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .approach-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .approach-card .number {
+            font-size: 5rem;
+            font-weight: bold;
+            color: rgba(255, 126, 95, 0.2);
+            margin-bottom: 1.5rem;
+        }
+        
+        .approach-card h3 {
+            font-size: 2.2rem;
+            color: #FF7E5F;
+            margin-bottom: 1.5rem;
+        }
+        
+        .approach-card p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 1024px) {
+            .solutions-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 4.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 2.4rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .section-intro h1 {
+                font-size: 3.5rem;
+            }
+            
+            .section-intro p {
+                font-size: 1.8rem;
+            }
+            
+            .hero-title {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles-config.js"></script>
+</head>
+<body>
+    <header class="s-header" style="position: fixed; top: 0; width: 100%; background-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.9));">
+        <div class="row s-header__inner width-sixteen-col">
+            <div class="s-header__block">
+                <div class="s-header__logo">
+                    <a class="logo" href="index_ja.html">
+                        <img src="images/logo.svg" alt="ホームページ">
+                    </a>
+                </div>
+                <a class="s-header__menu-toggle" href="#0"><span>メニュー</span></a>
+            </div>
+            <nav class="s-header__nav">
+                <ul class="flex space-x-1 md:space-x-4 text-sm font-medium">
+                    <li><a href="web_development_ja.html" class="text-gray-300 hover:text-white transition-colors duration-200">ウェブ開発</a></li>
+                    <li><a href="ai_solutions_ja.html" class="text-gray-300 hover:text-white transition-colors duration-200">AIソリューション</a></li>
+                    <li><a href="index_ja.html#about" class="text-gray-300 hover:text-white transition-colors duration-200">当社について</a></li>
+                    <li><a href="index_ja.html#contact" class="text-gray-300 hover:text-white transition-colors duration-200">お問い合わせ</a></li>
+                    <li><a href="web_development.html" class="text-gray-300 hover:text-white transition-colors duration-200">ENGLISH</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main style="padding-top: 80px;">
+        <section class="hero-section">
+            <div id="particles-js" class="particles-js"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">ウェブ開発ソリューション</h1>
+                <h2 class="hero-subtitle">ビジネス成長のために設計</h2>
+                <p class="hero-description">ビジネス目標に沿い、ユーザー体験を向上させ、測定可能な成果をもたらす洗練された高性能なウェブソリューションを設計・開発しています。</p>
+            </div>
+        </section>
+        
+        <section class="solution-section">
+            <div class="solution-content">
+                <div class="section-header">
+                    <h2>ウェブ開発サービス</h2>
+                    <p>成長企業の特有のニーズに応えるため、最先端のテクノロジーとユーザー中心の設計原則で作られた包括的なウェブソリューションをご提供します。</p>
+                </div>
+                
+                <div class="solutions-grid">
+                    <!-- Custom Website Development -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>カスタムウェブサイト開発</h3>
+                        <p>ブランドアイデンティティを反映し、特定のビジネス要件を満たすためにゼロから設計・構築されたオーダーメイドのウェブサイトを提供します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> あらゆるデバイスと画面サイズに対応したレスポンシブデザイン</li>
+                            <li><i class="fas fa-check"></i> パフォーマンス最適化されたアーキテクチャ</li>
+                            <li><i class="fas fa-check"></i> SEOフレンドリーな構造とコーディング</li>
+                            <li><i class="fas fa-check"></i> アクセシビリティ準拠（WCAG基準）</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- E-Commerce Solutions -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>Eコマースソリューション</h3>
+                        <p>直感的なショッピング体験、安全な決済処理、包括的な在庫管理を備えたスケーラブルなオンラインストアを構築します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> カスタム商品カタログとカテゴリ管理</li>
+                            <li><i class="fas fa-check"></i> 複数の決済ゲートウェイ統合</li>
+                            <li><i class="fas fa-check"></i> 注文管理と出荷システム</li>
+                            <li><i class="fas fa-check"></i> 顧客アカウントとロイヤルティ機能</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Web Application Development -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>ウェブアプリケーション開発</h3>
+                        <p>複雑なビジネスプロセスを合理化されたデジタルワークフローと直感的なユーザーインターフェースに変換する高度なウェブアプリケーションを開発します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> ビジネスニーズに合わせたカスタム機能</li>
+                            <li><i class="fas fa-check"></i> サードパーティAPIとの連携</li>
+                            <li><i class="fas fa-check"></i> リアルタイムデータ処理機能</li>
+                            <li><i class="fas fa-check"></i> スケーラブルなクラウドベースのインフラ</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- CMS Implementation -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>CMS実装</h3>
+                        <p>チームが技術的な専門知識なしにウェブサイトのコンテンツを簡単に更新・管理できるカスタムコンテンツ管理システムを提供します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> 直感的なダッシュボードと管理インターフェース</li>
+                            <li><i class="fas fa-check"></i> 役割ベースのアクセス制御</li>
+                            <li><i class="fas fa-check"></i> コンテンツのバージョン管理とスケジュール設定</li>
+                            <li><i class="fas fa-check"></i> メディアライブラリとアセット管理</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Progressive Web Apps -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>プログレッシブウェブアプリ</h3>
+                        <p>オフライン機能と優れたパフォーマンスを備え、ウェブブラウザを通じてアプリのような体験を提供する最先端のPWAを開発します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> オフライン機能とローカルストレージ</li>
+                            <li><i class="fas fa-check"></i> プッシュ通知の統合</li>
+                            <li><i class="fas fa-check"></i> ホーム画面へのインストール機能</li>
+                            <li><i class="fas fa-check"></i> 低速ネットワークでも高速読み込み</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- UX/UI Design -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>UX/UIデザイン</h3>
+                        <p>直感的で魅力的なデジタル体験を創造するために、審美的な魅力と機能的な効率性のバランスを取ったユーザー中心の設計を行います。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> ユーザー調査とペルソナ開発</li>
+                            <li><i class="fas fa-check"></i> 情報アーキテクチャの最適化</li>
+                            <li><i class="fas fa-check"></i> インタラクティブなプロトタイピングとユーザーテスト</li>
+                            <li><i class="fas fa-check"></i> アクセシビリティに焦点を当てたデザインシステム</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- API Development & Integration -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>API開発と統合</h3>
+                        <p>ウェブプレゼンスをサードパーティサービスと接続し、システム間でシームレスなデータ交換を可能にするカスタムAPIソリューションを開発します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> RESTfulおよびGraphQL APIアーキテクチャ</li>
+                            <li><i class="fas fa-check"></i> 認証とセキュリティの実装</li>
+                            <li><i class="fas fa-check"></i> ドキュメントと開発者リソース</li>
+                            <li><i class="fas fa-check"></i> パフォーマンス最適化とキャッシング</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Website Maintenance & Support -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>ウェブサイト保守・サポート</h3>
+                        <p>ウェブプレゼンスが常に安全で最新かつ最適なパフォーマンスを維持するための包括的なメンテナンスサービスを提供します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> 定期的なセキュリティ更新と監視</li>
+                            <li><i class="fas fa-check"></i> パフォーマンス最適化と速度向上</li>
+                            <li><i class="fas fa-check"></i> コンテンツ更新と技術サポート</li>
+                            <li><i class="fas fa-check"></i> バックアップ管理と災害復旧</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="solution-section">
+            <div class="solution-content">
+                <div class="section-header">
+                    <h2>開発方法論</h2>
+                    <p>ウェブ開発プロジェクトが予定通りに、予算内で、ビジネス目標に沿って確実に納品されるための思慮深く協調的なアプローチを提供します。</p>
+                </div>
+                
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="number">01</div>
+                        <h3>発見と計画</h3>
+                        <p>詳細なプロジェクト仕様とタイムラインを作成する前に、ビジネス、ユーザー、目標を包括的に理解することから始めます。</p>
+                    </div>
+                    
+                    <div class="approach-card">
+                        <div class="number">02</div>
+                        <h3>デザインとプロトタイピング</h3>
+                        <p>設計プロセスでは、審美的な魅力と機能要件のバランスを取り、テストと改良のためのインタラクティブなプロトタイプを作成します。</p>
+                    </div>
+                    
+                    <div class="approach-card">
+                        <div class="number">03</div>
+                        <h3>開発と反復</h3>
+                        <p>アジャイル手法を使用して、反復的なサイクルでソリューションを構築し、ビジョンに確実に沿うようフィードバックを取り入れます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="solution-section" style="text-align: center;">
+            <div class="solution-content">
+                <h2 style="font-size: 3.6rem; color: #fff; margin-bottom: 3rem;">ウェブプロジェクトを始める準備はできましたか？</h2>
+                <a href="index_ja.html#contact" class="contact-btn" style="display: inline-block; padding: 1.8rem 3.5rem; background: linear-gradient(45deg, #FF7E5F, #FF5975); border-radius: 50px; color: white; font-size: 2rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(255, 126, 95, 0.3);">お問い合わせ <i class="fas fa-arrow-right" style="margin-left: 1rem;"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: '#FF7E5F'
+                    },
+                    shape: {
+                        type: 'circle'
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false,
+                        animation: {
+                            enable: true,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        animation: {
+                            enable: true,
+                            speed: 2,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: '#FF7E5F',
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'out',
+                        bounce: false,
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: 'grab'
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: 'push'
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 140,
+                            line_linked: {
+                                opacity: 1
+                            }
+                        },
+                        push: {
+                            particles_nb: 4
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/3a9b2795f3.js" crossorigin="anonymous"></script>
+</body>
+</html>

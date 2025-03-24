@@ -1,0 +1,8 @@
+.signature {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}

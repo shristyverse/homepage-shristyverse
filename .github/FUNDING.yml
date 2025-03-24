@@ -1,0 +1,43 @@
+# These are supported funding model platforms
+
+# GitHub Sponsors
+github: ["shristy-powdel-jaishi", "designs-for-cause", "nepal-projects", "innovative-solutions"]
+
+# Patreon
+patreon: "shristy_creations"
+
+# Open Collective
+open_collective: "open_creations"
+
+# Ko-fi
+ko_fi: "shristy_ko"
+
+# Tidelift
+# Specify the package name in the format platform/package-name
+# Example: npm/babel
+tidelift: "npm/my-awesome-package"
+
+# Community Bridge
+# Replace with project name (e.g., cloud-foundry)
+community_bridge: "innovative_infra"
+
+# Liberapay
+liberapay: "shristy_liberapay"
+
+# IssueHunt
+issuehunt: "shristy_issues"
+
+# LFX Crowdfunding
+lfx_crowdfunding: "tech-for-community"
+
+# Polar
+polar: "shristy_polar"
+
+# Buy Me a Coffee
+buy_me_a_coffee: "shristycoffee"
+
+# Thanks.dev
+thanks_dev: "shristy_thanks"
+
+# Custom Sponsorship URLs
+custom: ["https://example.com/sponsor1", "https://example.com/sponsor2", "https://example.com/sponsor3", "https://example.com/sponsor4"]

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>企業向けAIソリューション | SHRISTYVERSE</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0A192F, #112240, #1A365D);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .solution-section {
+            padding: 6rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .solution-section:last-child {
+            border-bottom: none;
+        }
+        
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-intro {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+        
+        .section-intro h1 {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #fff, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .section-intro p {
+            font-size: 2.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+        
+        .solution-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+        
+        .solution-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .solution-icon i {
+            font-size: 2.4rem;
+            color: #00f2fe;
+        }
+        
+        .solution-card h3 {
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            color: #00f2fe;
+        }
+        
+        .solution-card p {
+            font-size: 1.6rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .solution-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .solution-features li {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .solution-features li i {
+            color: #00f2fe;
+            margin-right: 1rem;
+            font-size: 1.4rem;
+            margin-top: 0.3rem;
+        }
+        
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1000px;
+            margin-top: 2rem;
+        }
+        
+        .particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: radial-gradient(circle at center, rgba(10, 25, 47, 0), rgba(10, 25, 47, 0.8));
+        }
+        
+        .hero-title {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #fff, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 2.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-description {
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 3.6rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header p {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 5rem;
+        }
+        
+        .approach-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .approach-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .approach-card .number {
+            font-size: 5rem;
+            font-weight: bold;
+            color: rgba(0, 242, 254, 0.2);
+            margin-bottom: 1.5rem;
+        }
+        
+        .approach-card h3 {
+            font-size: 2.2rem;
+            color: #00f2fe;
+            margin-bottom: 1.5rem;
+        }
+        
+        .approach-card p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 1024px) {
+            .solutions-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 4.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 2.4rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .section-intro h1 {
+                font-size: 3.5rem;
+            }
+            
+            .section-intro p {
+                font-size: 1.8rem;
+            }
+            
+            .hero-title {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles-config.js"></script>
+</head>
+<body>
+    <header class="s-header" style="position: fixed; top: 0; width: 100%; background-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.9));">
+        <div class="row s-header__inner width-sixteen-col">
+            <div class="s-header__block">
+                <div class="s-header__logo">
+                    <a class="logo" href="index_ja.html">
+                        <img src="images/logo.svg" alt="ホームページ">
+                    </a>
+                </div>
+                <a class="s-header__menu-toggle" href="#0"><span>メニュー</span></a>
+            </div>
+            <nav class="s-header__nav">
+                <ul class="flex space-x-1 md:space-x-4 text-sm font-medium">
+                    <li><a href="web_development_ja.html" class="text-gray-300 hover:text-white transition-colors duration-200">ウェブ開発</a></li>
+                    <li><a href="ai_solutions_ja.html" class="text-gray-300 hover:text-white transition-colors duration-200">AIソリューション</a></li>
+                    <li><a href="index_ja.html#about" class="text-gray-300 hover:text-white transition-colors duration-200">当社について</a></li>
+                    <li><a href="index_ja.html#contact" class="text-gray-300 hover:text-white transition-colors duration-200">お問い合わせ</a></li>
+                    <li><a href="ai_solutions.html" class="text-gray-300 hover:text-white transition-colors duration-200">ENGLISH</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main style="padding-top: 80px;">
+        <section class="hero-section">
+            <div id="particles-js" class="particles-js"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">エンタープライズグレードAIソリューション</h1>
+                <h2 class="hero-subtitle">中小企業向けにカスタマイズ</h2>
+                <p class="hero-description">データ主権と既存システムへの統合を保証しながら、成長企業特有の業務課題に対応する最先端AIソリューションの開発、調整、カスタマイズを行います。</p>
+            </div>
+        </section>
+        
+        <section class="solution-section">
+            <div class="solution-content">
+                <div class="section-header">
+                    <h2>AIソリューションポートフォリオ</h2>
+                    <p>中小企業の運用課題と予算制約に特化した、変革力のあるカスタマイズ可能なAIシステムを提供します。</p>
+                </div>
+                
+                <div class="solutions-grid">
+                    <!-- OCR Solution -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>インテリジェント文書処理</h3>
+                        <p>複雑な多ページ文書、フォーム、レガシーフォーマットを処理できる高度なOCRとインテリジェントデータ抽出システムで、文書ワークフローを変革します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> カスタムトレーニングによる構造化文書の99.5%の精度</li>
+                            <li><i class="fas fa-check"></i> フォームフィールド認識と自動データ入力</li>
+                            <li><i class="fas fa-check"></i> アジア言語文字セットを含む多言語対応</li>
+                            <li><i class="fas fa-check"></i> 既存の文書管理システムとのシームレスな統合</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Chatbot Solution -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>文脈認識型ナレッジアシスタント</h3>
+                        <p>社内および顧客の問い合わせに正確で文脈に即した回答を提供するため、企業の知識ベース、文書、データベースにアクセスできる高度な会話型AIを導入します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> PDF、文書、データベース連携機能</li>
+                            <li><i class="fas fa-check"></i> 複数ターンの会話記憶と文脈保持</li>
+                            <li><i class="fas fa-check"></i> ロールベースのアクセス制御と情報セキュリティ</li>
+                            <li><i class="fas fa-check"></i> マルチチャネル展開（Web、モバイル、メッセージングプラットフォーム）</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Meeting Intelligence -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h3>会議インテリジェンススイート</h3>
+                        <p>複数の話者環境向けに設計されたAI搭載の文字起こし、要約、アクションアイテム抽出システムで、組織の会議の価値を最大限に引き出します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> 話者識別と音声署名認識</li>
+                            <li><i class="fas fa-check"></i> アクションアイテムの自動割り当てと追跡</li>
+                            <li><i class="fas fa-check"></i> 重要な決定事項とインサイトの抽出</li>
+                            <li><i class="fas fa-check"></i> プロジェクト管理ツールとの連携</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Talent Matching -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>高精度人材マッチング</h3>
+                        <p>キーワードマッチングを超え、役割要件と候補者の能力を意味的レベルで理解するAI駆動システムで、採用プロセスを効率化します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> スキルタクソノミーマッピングと能力推論</li>
+                            <li><i class="fas fa-check"></i> 企業文化適合性とチーム互換性分析</li>
+                            <li><i class="fas fa-check"></i> バイアス検出と軽減アルゴリズム</li>
+                            <li><i class="fas fa-check"></i> 自動候補者コミュニケーションワークフロー</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Predictive Analytics -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>中小企業向け予測分析</h3>
+                        <p>データサイエンスの専門知識を必要とせず、実用的なビジネスインサイトを提供する適応型予測モデルにより、中小企業のデータ量に合わせたエンタープライズグレードの予測機能を獲得できます。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> 限られた履歴データによる需要予測</li>
+                            <li><i class="fas fa-check"></i> 在庫最適化とキャッシュフロー予測</li>
+                            <li><i class="fas fa-check"></i> 顧客離脱防止アラート</li>
+                            <li><i class="fas fa-check"></i> 非技術ユーザー向けの視覚的分析ダッシュボード</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Visual Quality Control -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>ビジュアル品質保証</h3>
+                        <p>最小限のハードウェア要件で、製造および生産環境における欠陥、不整合、品質問題を検出できるコンピュータビジョンシステムを実装します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> 限られたトレーニング例による異常検出</li>
+                            <li><i class="fas fa-check"></i> 標準産業用カメラとの統合</li>
+                            <li><i class="fas fa-check"></i> 即時介入のためのリアルタイムアラートシステム</li>
+                            <li><i class="fas fa-check"></i> オペレーターからのフィードバックによる継続的学習</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Customer Insights -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>顧客インサイトエンジン</h3>
+                        <p>NLP搭載の感情分析とフィードバック分類システムにより、複数チャネルにわたる顧客インタラクションから実用的なインサイトを抽出します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> マルチチャネルフィードバック集約（SNS、メール、サポート）</li>
+                            <li><i class="fas fa-check"></i> 感情傾向分析とアラートしきい値</li>
+                            <li><i class="fas fa-check"></i> 製品・サービス領域別の自動フィードバック分類</li>
+                            <li><i class="fas fa-check"></i> 公開レビューからの競合情報抽出</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Content Generation -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <h3>ブランド調和型コンテンツ生成</h3>
+                        <p>企業独自の声調とスタイルガイドラインを維持しながら、マーケティングコピー、製品説明、コミュニケーションを生成できるAIシステムでコンテンツ作成を加速します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> ブランドアイデンティティに合わせた声調とトーンのカスタマイズ</li>
+                            <li><i class="fas fa-check"></i> 多言語コンテンツ適応（単なる翻訳ではなく）</li>
+                            <li><i class="fas fa-check"></i> 業界特有のコンテンツに対する規制遵守チェック</li>
+                            <li><i class="fas fa-check"></i> キーワード戦略統合によるSEO最適化</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Process Automation -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>インテリジェントプロセス自動化</h3>
+                        <p>機械学習と従来の自動化の力を組み合わせて、判断と例外処理を必要とする複雑なビジネスプロセスを処理できるシステムを作成します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> プロセス設定のための自然言語指示</li>
+                            <li><i class="fas fa-check"></i> 複雑なワークフローの意思決定機能</li>
+                            <li><i class="fas fa-check"></i> 例外に対するヒューマンインザループ介入</li>
+                            <li><i class="fas fa-check"></i> プロセス分析と継続的改善の推奨事項</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recommendation Engine -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>スモールデータ推奨エンジン</h3>
+                        <p>高度な転移学習技術を活用して、中小企業の運用に典型的な限られたデータ量でも効果的な推奨を提供するパーソナライゼーションシステムを構築します。</p>
+                        <ul class="solution-features">
+                            <li><i class="fas fa-check"></i> 新製品/ユーザーのコールドスタート問題軽減</li>
+                            <li><i class="fas fa-check"></i> クロスカテゴリ推奨機能</li>
+                            <li><i class="fas fa-check"></i> 多様なデータタイプのためのハイブリッドフィルタリングアプローチ</li>
+                            <li><i class="fas fa-check"></i> 推奨戦略のA/Bテストフレームワーク</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="solution-section">
+            <div class="solution-content">
+                <div class="section-header">
+                    <h2>中小企業向けエンタープライズAIへのアプローチ</h2>
+                    <p>迅速な導入と測定可能なROIに焦点を当てた体系的アプローチを通じて、エンタープライズグレードのAI機能を成長企業にもたらす方法論を開発しました。</p>
+                </div>
+                
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="number">01</div>
+                        <h3>ドメイン特化型適応</h3>
+                        <p>基盤モデルを特定の業界分野と運用コンテキストに適応させ、データ要件を大幅に削減しながら高いパフォーマンスを維持します。</p>
+                    </div>
+                    
+                    <div class="approach-card">
+                        <div class="number">02</div>
+                        <h3>オンプレミス導入</h3>
+                        <p>当社のソリューションは既存のインフラ内で完全に動作し、完全なデータ主権とプライバシー規制への準拠を保証します。</p>
+                    </div>
+                    
+                    <div class="approach-card">
+                        <div class="number">03</div>
+                        <h3>統合優先設計</h3>
+                        <p>すべてのソリューションを既存のテクノロジースタックとシームレスに統合するよう設計し、混乱を最小限に抑え、導入を最大化します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="solution-section" style="text-align: center;">
+            <div class="solution-content">
+                <h2 style="font-size: 3.6rem; color: #fff; margin-bottom: 3rem;">ビジネスにAIを活用する準備はできましたか？</h2>
+                <a href="index_ja.html#contact" class="contact-btn" style="display: inline-block; padding: 1.8rem 3.5rem; background: linear-gradient(45deg, #4facfe, #00f2fe); border-radius: 50px; color: white; font-size: 2rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);">お問い合わせ <i class="fas fa-arrow-right" style="margin-left: 1rem;"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: '#00f2fe'
+                    },
+                    shape: {
+                        type: 'circle'
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false,
+                        animation: {
+                            enable: true,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        animation: {
+                            enable: true,
+                            speed: 2,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: '#00f2fe',
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'out',
+                        bounce: false,
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: 'grab'
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: 'push'
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 140,
+                            line_linked: {
+                                opacity: 1
+                            }
+                        },
+                        push: {
+                            particles_nb: 4
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/3a9b2795f3.js" crossorigin="anonymous"></script>
+</body>
+</html>
